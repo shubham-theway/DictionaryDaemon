@@ -1,0 +1,14 @@
+run the hashtable with the usual command
+it will initiate as daemon and will display its PID before going in the backend.
+
+gcc hashtable.c
+./a.out keywords
+
+
+run client for any query and to talk to daemon
+gcc -o c.o client.c
+
+./c.o apple
+./c.o apple samsung
+
+etc.
