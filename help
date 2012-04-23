@@ -1,5 +1,13 @@
-run the hashtable with the usual command
-it will initiate as daemon and will display its PID before going in the backend.
+This is an implementation of DictionaryDaemon (DD)
+it will be initiated as daemon and will display its PID before going in the backend and after that it will be running 
+and keep listening to a specific message queue for queries from client.
+
+keywords is the file which contains string/int pair and which should be used to initialize our DD.
+Once initialized DD will keep all the data in memory in a structured way without consuming much memory and is designed to 
+give lightning fast responses.
+Tested for 80000 string/int pair and found no delay in response.
+
+You can either use the following commands or use the make file directly
 
 gcc hashtable.c
 ./a.out keywords
@@ -8,7 +16,7 @@ gcc hashtable.c
 run client for any query and to talk to daemon
 gcc -o c.o client.c
 
-./c.o apple
-./c.o apple samsung
+./c.o keyword1
+./c.o keyword2
 
 etc.
